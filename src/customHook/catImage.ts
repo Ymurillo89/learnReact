@@ -4,8 +4,6 @@ import { getDataEcho } from "../service/catService";
 export function useCatImage({ catFact }: { catFact: string }): string {
   const [imageCat, setImageCat] = useState<string>("");
 
-  console.log(catFact);
-
   useEffect(() => {
     const threeWord = catFact.split(" ", 3).join(" ");
     fetch(`https://cataas.com/cat/says/${threeWord}`)

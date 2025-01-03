@@ -1,8 +1,8 @@
 
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import ListMovies from './components/ListMovies';
-
 import { useMovies, useSearchMovies } from './customHook/movies';
+import debounce from 'just-debounce-it';
 
 function Movies() {
 
@@ -10,9 +10,14 @@ function Movies() {
   const { search, setSearch, error } = useSearchMovies();
   const { movies, getMovies, loading } = useMovies({ search,sort });
 
+  const debounceGetMovies = useCallback(debounce((search:string)=>{  
+    getMovies(search);
+  },500),[])
+
   const asignamentValue = (event: any) => {
     const value = event.target.value;
     setSearch(value);
+    debounceGetMovies(value);
   }  
 
   const getmoviesData = (event: any) => {

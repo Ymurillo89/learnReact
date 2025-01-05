@@ -1,8 +1,16 @@
-export interface IGetProduct{
+export interface IGetProduct {
     id: number;
-    name:string; 
-    category:string
+    title: string;
     price: number;
-    mark: string
-    characteristic: string[]
-}
+    description: string;
+    category: string;
+    image: string;
+    rating: Rating;
+  }
+  
+interface Rating {
+    rate: number;
+    count: number;
+  }
+  
+  

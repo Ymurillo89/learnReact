@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getDataEcho } from "../../service/catService";
-import { useCatImage } from "../../customHook/catImage";
+import { useCatImage, useEcho } from "../../customHook/catImage";
 
 //Custom Hook
 function Cat() {

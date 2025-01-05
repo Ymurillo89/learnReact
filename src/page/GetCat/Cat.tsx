@@ -3,8 +3,6 @@ import { getDataEcho } from "../../service/catService";
 import { useCatImage } from "../../customHook/catImage";
 
 //Custom Hook
-
-
 function Cat() {
 
   const [catFact, setCatFact] = useState<string>("");

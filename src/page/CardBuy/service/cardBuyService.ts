@@ -1,5 +1,10 @@
-export async function getDataProduct(){
+import { IGetProduct } from "../interface/cardBuy";
 
-    let data = fetch("https://fakestoreapi.com/products");
+export async function getDataProduct():Promise<{dataProduct:IGetProduct[]}> {
+
+    let response = await fetch("https://fakestoreapi.com/products");
+    let dataProduct:IGetProduct[] = await response.json();   
+    
+    return {dataProduct};
     //let response = data.res
 }

@@ -2,7 +2,7 @@
 // import FollowMouse from "./page/FollowMouse/FollowMouse";
 // import Cat from "./page/GetCat/Cat";
 import CardBuy from "./page/CardBuy/CardBuy";
-import Movies from "./page/movies/Movies";
+// import Movies from "./page/movies/Movies";
 
 function App() {
   return (

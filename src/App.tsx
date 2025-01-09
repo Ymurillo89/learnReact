@@ -13,6 +13,7 @@ function App() {
       {/* <FollowMouse></FollowMouse> */}
        {/* <Movies/> */}
       {/* <Cat/> */}
+      
       <CardBuy/>
     </>
   );

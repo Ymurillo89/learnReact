@@ -20,7 +20,7 @@ export default function FilterProduct({data}:{data:IFilterProduct}) {
   return (
     <div className="flex flex-row items-center gap-2">
       <input type="checkbox" name={data.name} id={data.name} onChange={()=>changeInput(data.type,data.name)} checked={select} />
-      <label htmlFor={data.name}>{data.name}</label>
+      <label className="capitalize" htmlFor={data.name}>{data.name}</label>
     </div>
 
   )
